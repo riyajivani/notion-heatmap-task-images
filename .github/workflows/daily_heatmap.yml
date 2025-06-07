@@ -46,7 +46,7 @@ jobs:
         env:
           GIT_ASKPASS: /bin/echo
           GIT_USERNAME: riyajivani
-          GIT_PASSWORD: ${{ secrets.PAT_TOKEN }}~
+          GIT_PASSWORD: ${{ secrets.PAT_TOKEN }}
         run: |
           git add images/heatmap.png
           git diff --cached --quiet || git commit -m "Daily heatmap update $(date +'%Y-%m-%d')"
