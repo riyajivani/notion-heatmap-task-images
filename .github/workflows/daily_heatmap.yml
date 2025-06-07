@@ -39,7 +39,7 @@ jobs:
           git commit -m "Daily heatmap update $(date +'%Y-%m-%d')" || echo "No changes to commit"
           git push origin gh-pages --force
         env:
-          GITHUB_TOKEN: ${{ secrets.notion-heatmap-images }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Update Notion with new image URL
         run: |
