@@ -1,4 +1,4 @@
-name: Daily Heatmap Update
+ame: Daily Heatmap Update
 
 on:
   schedule:
@@ -47,4 +47,4 @@ jobs:
         env:
           NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
           NOTION_PAGE_ID: ${{ secrets.NOTION_PAGE_ID }}
-          IMAGE_URL: https://raw.githubusercontent.com/yourusername/notion-heatmap-images/gh-pages/images/heatmap.png
+          IMAGE_URL: https://raw.githubusercontent.com/riyajivani/notion-heatmap-images/gh-pages/images/heatmap.png
