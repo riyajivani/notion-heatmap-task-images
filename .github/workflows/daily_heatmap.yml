@@ -1,4 +1,4 @@
-ame: Daily Heatmap Update
+name: Daily Heatmap Update
 
 on:
   schedule:
