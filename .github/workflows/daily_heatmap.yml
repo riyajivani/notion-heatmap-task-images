@@ -42,7 +42,7 @@ jobs:
           git config --global user.name "riyajivani"
           git config --global user.email "riyajivani8@gmail.com"
 
-       name: Commit and push heatmap image
+      - name: Commit and push heatmap image   # <-- indentation fixed here
         env:
           GIT_ASKPASS: /bin/echo
           GIT_USERNAME: riyajivani
