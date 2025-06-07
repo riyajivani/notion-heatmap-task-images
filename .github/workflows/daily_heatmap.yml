@@ -42,11 +42,15 @@ jobs:
           git config --global user.name "riyajivani"
           git config --global user.email "riyajivani8@gmail.com"
 
-      - name: Commit and push heatmap image
+       name: Commit and push heatmap image
+        env:
+          GIT_ASKPASS: /bin/echo
+          GIT_USERNAME: riyajivani
+          GIT_PASSWORD: ${{ secrets.PAT_TOKEN }}~
         run: |
           git add images/heatmap.png
           git diff --cached --quiet || git commit -m "Daily heatmap update $(date +'%Y-%m-%d')"
-          git push origin gh-pages --force
+          git push https://$GIT_USERNAME:$GIT_PASSWORD@github.com/riyajivani/notion-heatmap-task-images.git gh-pages --force
 
       - name: Update Notion with new image URL
         run: |
