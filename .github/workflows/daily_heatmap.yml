@@ -50,7 +50,8 @@ jobs:
         run: |
           git add images/heatmap.png
           git diff --cached --quiet || git commit -m "Daily heatmap update $(date +'%Y-%m-%d')"
-          git push https://$GIT_USERNAME:$GIT_PASSWORD@github.com/riyajivani/notion-heatmap-task-images.git gh-pages --force
+          git remote set-url origin https://$GIT_USERNAME:$GIT_PASSWORD@github.com/riyajivani/notion-heatmap-task-images.git
+          git push origin gh-pages --force
 
       - name: Update Notion with new image URL
         run: |
