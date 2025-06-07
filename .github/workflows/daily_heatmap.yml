@@ -14,7 +14,6 @@ jobs:
         with:
           ref: master  # your default branch
           fetch-depth: 0         # full history for pushing
-          persist-credentials: true  # important to push with default token
 
       - name: Set up Python
         uses: actions/setup-python@v4
