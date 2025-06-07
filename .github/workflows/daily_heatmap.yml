@@ -36,6 +36,11 @@ jobs:
         run: |
           mkdir -p images
           mv heatmap.png images/heatmap.png
+      
+      - name: Configure git
+        run: |
+          git config --global user.name "riyajivani"
+          git config --global user.email "riyajivani8@gmail.com"
 
       - name: Commit and push heatmap image
         run: |
